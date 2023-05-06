@@ -1141,7 +1141,7 @@ bool win_should_animate(session_t *ps, const struct managed_win *w) {
     if (!ps->o.animations) {
         return false;
     }
-    if (ps->o.wintype_option[w->window_type].animation == 0) {
+    if (ps->o.wintype_option[w->window_type].animation == OPEN_WINDOW_ANIMATION_NONE) {
         log_debug("Animation disabled by window_type");
         return false;
     }
